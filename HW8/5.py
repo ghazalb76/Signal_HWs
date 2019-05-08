@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-
 j = np.complex(0, 1)
 pi = np.pi
 e = np.e
@@ -26,15 +25,19 @@ lengeth = np.sqrt(np.real(y)**2+np.imag(y)**2)
 
 x2 = np.arange(-1*range_cnt, 1*range_cnt, 1)
 # draw coefficinets
+#---- the shape of this part is not very good because there are 10000 input for the function matplotlib compresses it 
+# if you set the x2 to 10 you can see that the shape is exactly the function
 chart1 = plt.subplot(311)
 plt.title("Original signal")
 plt.stem(x2, x)
+
 chart1 = plt.subplot(312)
 plt.title("FT length")
 plt.stem(x2, lengeth)
+
 chart1 = plt.subplot(313)
 plt.title("FT phase")
 plt.stem(x2, phase)
 
-# # Show
+# Show
 plt.show()
